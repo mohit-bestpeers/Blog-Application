@@ -12,10 +12,10 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
+    @articles = Article.find(params[:id])
 
-    if @article.update(article_params)
-      redirect_to @article
+    if @articles.update(article_params)
+      redirect_to @articles
     else
       render :edit, status: :unprocessable_entity
     end
